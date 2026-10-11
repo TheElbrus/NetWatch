@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">netwatch redacted demo</title>
+  <desc id="desc">A redacted netwatch scan summary showing devices and findings without real hostnames or MAC addresses.</desc>
+  <defs>
+    <style>
+      .bg { fill: #0b1020; }
+      .panel { fill: #121a2b; stroke: #2a3b5c; stroke-width: 2; }
+      .title { fill: #ebf3ff; font: 700 32px 'Segoe UI', sans-serif; }
+      .header { fill: #8ec5ff; font: 600 18px 'Segoe UI', sans-serif; }
+      .text { fill: #dfeafc; font: 500 18px 'Segoe UI', sans-serif; }
+      .muted { fill: #94a9c9; font: 500 16px 'Segoe UI', sans-serif; }
+      .good { fill: #5fd39d; }
+      .warn { fill: #f6c76c; }
+      .bad { fill: #ff7f7f; }
+      .chip { fill: #1c2c45; stroke: #36537e; stroke-width: 1.5; }
+      .bar { fill: #254a80; }
+      .bar2 { fill: #2e7d5d; }
+      .bar3 { fill: #a6612f; }
+    </style>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1200" height="720"/>
+  <rect class="panel" x="40" y="40" width="1120" height="640" rx="18"/>
+  <text class="title" x="70" y="95">netwatch scan summary</text>
+  <text class="muted" x="911" y="95">Beta • Redacted demo</text>
+
+  <rect class="chip" x="70" y="125" width="220" height="44" rx="12"/>
+  <text class="header" x="90" y="152">Scanning 192.168.1.0/24</text>
+
+  <rect class="chip" x="310" y="125" width="170" height="44" rx="12"/>
+  <text class="header" x="330" y="152">3 devices</text>
+
+  <rect class="chip" x="500" y="125" width="200" height="44" rx="12"/>
+  <text class="header" x="520" y="152">Findings: 2</text>
+
+  <rect class="panel" x="70" y="190" width="500" height="220" rx="14"/>
+    <text class="header" x="92" y="220">Devices</text>
+    <line x1="90" y1="240" x2="540" y2="240" stroke="#2d4475"/>
+    <text class="text" x="92" y="275">• Gateway: 192.168.1.1  •  MAC: xx:xx:xx:xx:xx:xx</text>
+    <text class="text" x="92" y="315">• Smart TV: 192.168.1.24  •  MAC: aa:bb:cc:dd:ee:ff</text>
+    <text class="text" x="92" y="355">• Laptop: 192.168.1.41  •  MAC: 12:34:56:78:9a:bc</text>
+    <text class="muted" x="92" y="388">Hostnames and device names redacted for safety.</text>
+  </rect>
+
+  <rect class="panel" x="610" y="190" width="500" height="220" rx="14"/>
+    <text class="header" x="632" y="220">Checks run</text>
+    <line x1="632" y1="240" x2="1088" y2="240" stroke="#2d4475"/>
+    <text class="text" x="632" y="275">router_dns: resolvers look expected</text>
+    <text class="text" x="632" y="315">router_upnp: no SSDP response from 192.168.1.1</text>
+    <text class="text" x="632" y="355">telnet_open: port 23 reached</text>
+  </rect>
+
+  <rect class="panel" x="70" y="440" width="1040" height="190" rx="14"/>
+    <text class="header" x="92" y="470">Summary</text>
+    <line x1="90" y1="490" x2="1090" y2="490" stroke="#2d4475"/>
+    <rect class="bar" x="92" y="520" width="300" height="18" rx="9"/>
+    <rect class="bar2" x="392" y="520" width="300" height="18" rx="9"/>
+    <rect class="bar3" x="692" y="520" width="180" height="18" rx="9"/>
+    <text class="text" x="92" y="580"> network posture: low risk</text>
+    <text class="text" x="390" y="580"> baseline: clean</text>
+    <text class="text" x="690" y="580"> follow-up: check open services</text>
+  </rect>
+</svg>

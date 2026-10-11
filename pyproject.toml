@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netwatch"
+version = "0.1.0"
+description = "A home network security scanner and change monitor"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["psutil>=5.9", "scapy>=2.5", "rich>=13.7"]
+authors = [{ name = "netwatch contributors" }]
+license = { text = "MIT" }
+keywords = ["network", "security", "home-network", "monitoring"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+]
+
+[project.scripts]
+netwatch = "netwatch.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+    "mypy>=1.11",
+    "types-psutil>=7.0",
+]
+
+[tool.setuptools]
+packages = ["netwatch"]
