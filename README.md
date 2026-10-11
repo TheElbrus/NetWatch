@@ -103,8 +103,8 @@ Key design decisions:
 ### From source
 
 ```bash
-git clone https://github.com/<your-username>/netwatch.git
-cd netwatch
+git clone https://github.com/TheElbrus/NetWatch.git
+cd NetWatch
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -e .
@@ -391,8 +391,8 @@ Being upfront about what this tool cannot do:
 ## Development
 
 ```bash
-git clone https://github.com/<your-username>/netwatch.git
-cd netwatch
+git clone https://github.com/TheElbrus/NetWatch.git
+cd NetWatch
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
 
